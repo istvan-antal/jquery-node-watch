@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script src="jquery-node-watch.js"></script>
+        <script>
+            $(function () {
+                $("#parent").bind('nodeChange', function () {
+                    $("#result").html('Success');
+                });
+                
+                $("#target").html('<span>Changed me</span>');
+            });
+        </script>
+    </head>
+    <body>
+        <div id="parent">
+            <div id="target">Change me</div>
+            
+        </div>
+        <div id="result"></div>
+    </body>
+</html>
